@@ -1,0 +1,10 @@
+package com.Assignment1.Day1;
+
+import java.util.Scanner;
+
+public class CubeSeries {
+	Scanner scan = new Scanner(System.in);
+	int num, i = 1;
+	System.out.println("Enter the range of numbers(Limit) :");
+	
+}

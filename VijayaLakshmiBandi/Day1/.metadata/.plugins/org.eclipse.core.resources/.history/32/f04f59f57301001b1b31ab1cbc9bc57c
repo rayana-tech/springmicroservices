@@ -1,0 +1,17 @@
+package com.Assignment1.Day1;
+
+public class LargerNumInArray {
+	public static int getLargerNumber(int arrList[], int numOfElements) {
+		int temp;
+		for(int i = 0; i < numOfElements; i++) {
+			for(int j = i + 1 ; j < numOfElements ; j++) {
+				if(a[i] > a[j]) {
+					temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+		return a[numOfElements-1];
+	}
+}

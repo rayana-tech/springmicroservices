@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.swing.text.AbstractDocument.Content"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
+<fullyQualifiedTypeName name="DependencyInjectionSample.DisplayNameUsingDI"/>
+<fullyQualifiedTypeName name="com.demo.ConStructorDI.DisplayNameUsingConstructorDI"/>
+<fullyQualifiedTypeName name="com.demo.SetterDI.SetterDI"/>
+<fullyQualifiedTypeName name="com.Assignments.XMLBasedSetterDI.EmployeeSetterDI"/>
+<fullyQualifiedTypeName name="com.Assignments.XMLBasedConstructorDI.EmployeeConstructorDI"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="com.Assignments.XMLBasedDIWithDifferentClasses.EmployeeDetails"/>
+<fullyQualifiedTypeName name="com.Assignments.XMLBasedDIWithDifferentClasses.SalaryDetails"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Annotation"/>
+<fullyQualifiedTypeName name="com.assignment.annotationdi.EmployeeConfig"/>
+<fullyQualifiedTypeName name="com.assignment.annotationdi.EmployeeClass"/>
+<fullyQualifiedTypeName name="com.assignment.annotationConstructorDI.EmpConAnnotationConfig"/>
+<fullyQualifiedTypeName name="com.assignment.annotationConstructorDI.EmpConAnnotation"/>
+<fullyQualifiedTypeName name="com.assignment.setterannotation.SetterEmpConfig"/>
+<fullyQualifiedTypeName name="com.assignment.setterannotation.SetterEmployee"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+<fullyQualifiedTypeName name="com.assignment.diffClassesAnnotationDI.EmployeeDetailsConfig"/>
+<fullyQualifiedTypeName name="com.assignment.diffClassesAnnotationDI.EmployeeDetails"/>
+<fullyQualifiedTypeName name="com.assignment.diffClassesAnnotationDI.SalaryDetails"/>
+</qualifiedTypeNameHistroy>

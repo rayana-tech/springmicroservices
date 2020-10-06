@@ -1,0 +1,6 @@
+package com.assignment.annotationConstructorDI;
+
+@Configuration
+public class EmpConAnnotationConfig {
+	
+}

@@ -1,0 +1,11 @@
+package com.assignment.annotationdi;
+
+import org.springframework.context.annotation.Bean;
+
+@Configuration
+public class EmployeeConfig {
+	   @Bean 
+	   public EmployeeClass helloWorld(){
+	      return new EmployeeClass();
+	   }
+}

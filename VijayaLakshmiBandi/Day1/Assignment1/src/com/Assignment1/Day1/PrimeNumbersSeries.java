@@ -1,0 +1,34 @@
+package com.Assignment1.Day1;
+
+import java.util.Scanner;
+
+public class PrimeNumbersSeries {
+	public static void main(String[] args) {
+		int n;
+		int status = 1;
+		int num = 3;
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the value of n: ");
+		 
+		n = scan.nextInt();
+		if( n >= 1) {
+			System.out.println("First "+n+" prime numbers are ");
+			System.out.println(2);
+		}
+		for(int i = 2;i <= n ;) {
+			for(int j = 2; i <= Math.sqrt(num);j++) {
+				if(num%j == 0) {
+					status = 0;
+					break;
+				}
+			}
+			if(status != 0) {
+				System.out.print(num+ " ");
+				i++;
+			}
+			status = 1;
+			num++;
+		}
+	}
+}

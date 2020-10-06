@@ -1,0 +1,10 @@
+package com.assignment.annotationdi;
+
+public class EmployeeConfig {
+	@Configuration
+	
+	   @Bean 
+	   public EmployeeClass helloWorld(){
+	      return new EmployeeClass();
+	   }
+}

@@ -1,0 +1,33 @@
+package com.Assignments.XMLBasedDIWithDifferentClasses;
+
+public class EmployeeDetails {
+	private String emplName;
+	private int empID;
+	private SalaryDetails salaryDetails;
+	public String getEmplName() {
+		return emplName;
+	}
+	public void setEmplName(String emplName) {
+		this.emplName = emplName;
+	}
+	public int getEmpID() {
+		return empID;
+	}
+	public void setEmpID(int empID) {
+		this.empID = empID;
+	}
+	public SalaryDetails getSalaryDetails() {
+		return salaryDetails;
+	}
+	public void setSalaryDetails(SalaryDetails salaryDetails) {
+		this.salaryDetails = salaryDetails;
+	}
+	public EmployeeDetails(String empName, int emplID, SalaryDetails salary) {
+		this.emplName = empName;
+		this.empID = emplID;
+		this.salaryDetails = salary;
+	}
+	void displayInfo() {
+		System.out.println(emplName+" got placed with id details as "+empID+" along with salary of "+salaryDetails);
+	}
+}

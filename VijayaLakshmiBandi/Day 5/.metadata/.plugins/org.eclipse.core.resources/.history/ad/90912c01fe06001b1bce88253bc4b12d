@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee" class="com.Assignments.XMLBasedDI.Employee">
+		<property name="id" value="100"></property>
+		<property name="empName" value="100"></property>
+		<property name="salary" value="100"></property>
+		
+	</bean>
+
+	<bean id="constructorEmployee"
+		class="com.Assignments.XMLBasedConstructorDI.EmployeeConstructorDI">
+		<constructor-arg value="Vijaya"></constructor-arg>
+				<constructor-arg value="200"></constructor-arg>
+				<constructor-arg value="Bandi"></constructor-arg>
+		<constructor-arg value="8000"></constructor-arg>
+	</bean>
+	<bean id="displayData" class="com.demo.SetterDI.SetterDI">
+		<property name="id">
+			<value>10</value>
+		</property>
+		<property name="name">
+			<value>Vijaya</value>
+		</property>
+	</bean>
+</beans>

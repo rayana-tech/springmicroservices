@@ -1,0 +1,8 @@
+package com.assignment.annotation;
+@Configuration
+public class EmployeeConfig {
+	   @Bean 
+	   public EmployeeClass helloWorld(){
+	      return new EmployeeClass();
+	   }
+}

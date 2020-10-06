@@ -1,0 +1,14 @@
+package com.assignment.diffClassesAnnotationDI;
+
+public class SalaryDetails {
+	private double annualSalary;
+
+	public double getAnnualSalary() {
+		return annualSalary;
+	}
+
+	public void setAnnualSalary(double annualSalary) {
+		this.annualSalary = annualSalary;
+	}
+	
+}

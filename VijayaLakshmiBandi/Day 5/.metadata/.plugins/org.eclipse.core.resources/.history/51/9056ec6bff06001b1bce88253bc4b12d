@@ -1,0 +1,10 @@
+package com.Assignments.XMLBasedConstructorDI;
+
+public class EmployeeConstructorDI {
+	public EmployeeConstructorDI() {
+		System.out.println("Default Constructor");
+	}
+	void display() {
+		EmployeeConstructorDI();
+	}
+}

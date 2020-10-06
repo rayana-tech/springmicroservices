@@ -1,0 +1,8 @@
+package com.Assignments.XMLBasedDI;
+
+public class Employee {
+	private String empName;
+	void display() {
+		System.out.println("Employee name is "+empName);
+	}
+}

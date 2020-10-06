@@ -1,0 +1,20 @@
+package com.Assignments.XMLBasedConstructorDI;
+
+public class EmployeeConstructorDI {
+	private int id;
+	private String empName ;
+	private double salary;
+	public EmployeeConstructorDI() {
+		System.out.println("Default Constructor");
+	}
+	public EmployeeConstructorDI(String emp, int id, double salary) {
+		System.out.println("Parameterized Constructor "+emp);
+		this.empName = emp;
+		this.id = id;
+		this.salary = salary;
+		
+	}
+	void display() {
+		System.out.println("Emp name "+empName+" \nEmp ID "+id+"\nEmpSalary "+salary);
+	}
+}

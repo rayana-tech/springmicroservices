@@ -1,0 +1,8 @@
+package com.assignment.setterannotation;
+@Configuration
+public class SetterEmpConfig {
+@Bean
+	public SetterEmployee displayEmp() {
+	return new SetterEmployee();
+}
+}

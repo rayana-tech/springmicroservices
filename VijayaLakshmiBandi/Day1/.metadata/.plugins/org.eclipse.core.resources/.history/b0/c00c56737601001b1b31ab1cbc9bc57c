@@ -1,0 +1,7 @@
+package com.Assignment1.Day1;
+
+public class CubeSeries {
+	Scanner scan = new Scanner(System.in);
+	int num, i = 1;
+	System.out.println("")
+}

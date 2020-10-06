@@ -1,0 +1,14 @@
+package com.LambdaExp.Examples;
+
+interface lambda {
+	int operation(int x, int y);
+}
+
+public class LambdaExp {
+
+	public static void main(String[] args) {
+		lambda add = (int a, int b) -> a+b;
+		System.out.println(add);
+	}
+	
+}

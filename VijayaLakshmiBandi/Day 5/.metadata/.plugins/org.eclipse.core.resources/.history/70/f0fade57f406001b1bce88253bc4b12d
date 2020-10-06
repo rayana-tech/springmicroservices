@@ -1,0 +1,13 @@
+package com.demo.ConStructorDI;
+
+public class DisplayNameUsingConstructorDI {
+	public DisplayNameUsingConstructorDI() {
+		System.out.println("Bandi");
+	}
+	public DisplayNameUsingConstructorDI(DisplayNameUsingConstructorDI name) {
+		System.out.println("Name is "+name);
+	}
+	void sampleDemo() {
+		DisplayNameUsingConstructorDI(DisplayNameUsingConstructorDI name);
+	}
+}

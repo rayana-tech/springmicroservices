@@ -1,0 +1,88 @@
+package com.StreamOperations.Assignments;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+
+		Player p1 = new Player();
+		p1.setPlayerName("player1");
+		p1.setMatchesPlayed(2);
+		p1.setHighestScore(120);
+		p1.setRuns(2000);
+		
+		Country c1 = new Country();
+		c1.setCountryId(1);
+		c1.setCountryName("India");
+		p1.setCountry(c1);
+		
+		
+		Player p2 = new Player();
+		p2.setPlayerName("BC");
+		p2.setMatchesPlayed(2);
+		p2.setHighestScore(180);
+		p2.setRuns(5001);
+		
+		Country c2 = new Country();
+		c2.setCountryId(1);
+		c2.setCountryName("Asia");
+		p2.setCountry(c2);
+		
+		
+		Player p3 = new Player();
+		p3.setPlayerName("Player3");
+		p3.setMatchesPlayed(2);
+		p3.setHighestScore(90);
+		p3.setRuns(12000);
+		p3.setCountry(c2);
+		
+		
+		Player p4 = new Player();
+		p4.setPlayerName("player4");
+		p4.setMatchesPlayed(2);
+		p4.setHighestScore(150);
+		p4.setRuns(2000);
+		p4.setCountry(c1);
+		
+		List<Player> playersList = new ArrayList<Player>();
+		playersList.add(p1);
+		playersList.add(p2);
+		playersList.add(p3);
+		playersList.add(p4);
+
+//		playersList.forEach(item -> System.out.println(item.getPlayerName()));
+		/*
+		 * 
+		
+		//1.
+		playersList.stream().forEach(item -> System.out.println(item.getPlayerName()));
+	
+		//2.
+		List<Player> newList = playersList.stream()
+		.filter(item -> item.getHighestScore() > 100 && item.getCountry().getCountryName().equals("India"))
+		.collect(Collectors.toList());
+		
+		newList.forEach(item -> System.out.println("India Players "+item.getPlayerName()));
+		
+		 */
+		List<String> linkedList = new LinkedList<String>();
+
+		List<Player> descList = playersList.stream()
+				.filter(player -> player.getRuns() > 5000)
+				.collect(Collectors.toList());
+
+		descList.forEach(i -> 
+			linkedList.add(i.getPlayerName()));
+
+		linkedList.stream().sorted((o1,o2)->o2.compareTo(o1) ).collect(Collectors.toList());
+		linkedList.forEach(i -> System.out.println(i));
+				
+		
+	}
+
+}

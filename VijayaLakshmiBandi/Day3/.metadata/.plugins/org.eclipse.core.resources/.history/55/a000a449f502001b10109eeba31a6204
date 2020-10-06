@@ -1,0 +1,11 @@
+package com.StreamOperations.Assignments;
+
+public class Player {
+	private String playerName;
+	private int matchesPlayed;
+	private int runs;
+	private int highestScore;
+	
+	Country country;
+	
+}

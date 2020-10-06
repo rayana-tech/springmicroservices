@@ -1,0 +1,10 @@
+package com.assignment.setterannotation;
+
+public class SetterMainApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

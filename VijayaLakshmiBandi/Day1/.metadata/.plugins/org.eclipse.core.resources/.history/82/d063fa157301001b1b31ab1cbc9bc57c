@@ -1,0 +1,33 @@
+package com.Assignment1.Day1;
+
+public class CountOfCharsInString {
+	static final int MAX_CHAR = 256;
+
+	static void repeatedChar(String givenString) {
+		int count[] = new int[MAX_CHAR];
+		int strLength = givenString.length();
+
+		for(int i = 0 ; i < strLength ; i++) {
+			count[givenString.charAt(i)]++;
+		}
+		
+		char ch[] = new char[givenString.length()];
+		for(int i = 0 ; i < strLength ; i++) {
+			ch[i] = givenString.charAt(i);
+			int find = 0;
+			for(int j = 0 ; j <= i; j++) {
+				if(givenString.charAt(i) == ch[j]) {
+					find++;
+				}
+			}
+			if(find == 1) {
+				System.out.println(givenString.charAt(i)+" ..... "+count[givenString.charAt(i)]);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		String inputString = "HelloWorld";
+		repeatedChar(inputString);
+	}
+
+}

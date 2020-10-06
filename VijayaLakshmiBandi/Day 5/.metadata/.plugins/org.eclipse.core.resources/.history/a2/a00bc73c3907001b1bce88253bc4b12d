@@ -1,0 +1,8 @@
+package com.assignment.diffClassesAnnotationDI;
+
+public class EmployeeDetails {
+	private String empName;
+	private int empID;
+	private SalaryDetails salary;
+	
+}
