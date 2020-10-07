@@ -20,7 +20,7 @@ public class SpringBootController {
 	
 	@RequestMapping("/insertBook")
 	public String insertOperation() {
-		jdbc.execute("insert into book(id,author,isbn,name,org) values(190,'Vijay',800,'Bandi','ust')");
+		jdbc.execute("insert into book(id,author,isbn,name,org) values(190,'Chris',800,'Augustine','ust')");
 		return "Data inserted";
 	}
 }
