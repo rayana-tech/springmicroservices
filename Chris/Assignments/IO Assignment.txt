@@ -1,0 +1,105 @@
+I/O Operations
+
+
+Assignment 1 – Create Files and Directories
+Create a class TestFile with a main method.
+
+Do the Following
+•	Create a folder named ‘Badminton’ in D or E drive based on system configuration
+•	Create two files in the folder named “singles.txt” and “dubbles.txt”.
+•	Create sub folder named “courts” in Badminton folder
+•	Create a file named smash.dat in “courts” folder
+•	Rename the dubbles.txt created earlier to doubles.txt
+•	Delete the file singles.txt
+
+
+Assignment 2 – Get Directory Details
+Create a class FolderInfo with a static method printDirectory. 
+
+printDirectory method should accept a folder path of type String as parameter. The method should print the contents of the passed folder as per below rules
+•	If folder does not exist, print message “No Folder exists with the given name”
+•	Details of every file in the given folder should be printed as below
+o	File : <filename>
+Absolute File path : <absolute path>
+Folder Path : <path of file excluding the file name> 
+•	Details of sub folder in the given folder should be printed as below
+o	Directory : <sub folder name>
+o	Path : <path of subfolder excluding the subfolder name>
+
+Note: Only the files and subfolders in the given folder needs to be printed. Details of files and folders in sub folders need not be printed.
+
+ 
+Assignment 3 – Storing Proverbs
+Mavis uses a lots of good proverbs while talking and Raghu is impressed by that. Raghu schedules a meeting with Mavis, to compile a list of all proverb’s Mavis knows. Raghu plans to store the proverbs in a file by creating a program. Help Raghu create the below program.
+
+Create a class named ProverbCollection with a static method storeProverb. The method takes proverb of type String as a parameter and writes the proverb to a file named TopProverbs.txt. 
+
+Note: Use BufferedOutputStream to write to the file
+
+Create a main method in the same class and do the following:
+•	Use a Scanner to accept a proverb
+•	Invoke method storeProverb, to write the proverb to a File.
+•	Program should ask the user to enter proverbs repeatedly until the user types “STOP”
+
+
+Assignment 4 – Reading Proverbs
+Raghu has stored a lot of good proverbs in a File named TopProverbs.txt. He wants to memorize those proverbs. He plans to write a program to read the file and display the proverbs on the Console. Help Raghu in writing the below program.
+
+Create class named ProverbReader with a main method. Read the file TopProverbs.txt using BufferedInputStream and display the file contents on the Console.
+
+Assignment 5 – Reversing Proverbs
+Create a class ProverbReverser for performing following tasks :
+•	reads the contents of a file “TopProverbs.txt”, 
+•	reverses each word read (create a separate static method reverseWord(String), which should return reverse word), 
+•	writes it to a destination file “ReverseProverbs.txt”, whose contents are read 
+•	output to the standard output.
+
+
+
+
+
+Assignment 6 – Format Document
+A Project Manager named Sunil have received a document from a client and is finding it difficult to read, as the document contains lots of extra spaces between words. He asked his associate Manzoor to format the document by removing extra spaces between words. Since the document is pretty big, Manzoor plans to automate this work by writing a program. Help Manzoor by creating the below program.
+
+Create a class DocumentFormatter with a main method. The main method should
+•	Read the file line by line
+•	Remove extra spaces from each line
+•	Write the formatted line to a new File. The name of the new file should be accepted from the user using a Scanner
+
+Note: Use BufferedReader to read the document and PrintWriter to write to the new file.
+
+
+Assignment 7 – Serialization and Deserialization
+Create a class Engine with private member variables engineNo of type String, cubicCapicity of type int. Include Getter/Setters and parameterized Constructor.
+
+Create a class Car with private member variables registrationNo of type String, carMake of type String, and engine of type Engine. Include Getter/Setters and parameterized Constructor.
+
+Create a class SerializeCar with a main method. In main method, create a Car object and serialize it in a file Cardata.ser. registrationNo and engineNo should not be stored during serialization.
+
+Create a class DeSerializeCar with a main method. In main method, Deserialize the Car object created in the earlier step and display the Car details along with the Engine details.
+
+
+Assignment 8 – List Directory Contents
+Create a class FileExplorer with a method listAll.
+
+The method listAll take a directory path as String and returns nothing. The method should print all the files and the subfolders in the given directory. If a sub folder contains files, that should also be printed. 
+
+Create a class TestFileExplorer with a main method.
+•	Accept a directory path from user using Scanner.
+•	Invoke the method listAll and pass the directory path to display the directory contents
+
+
+
+Assignment 9 – Copy Image
+Create a class ImageCopy with a static method copyImage. 
+
+Method copyImage should take a File object as input and return a boolean. If file is copied successfully, return true. The method should create a copy of the image in the same folder as that of the given image. The filename of the copied file should be “<sourcefilename>_copy.jpeg”.
+
+Note: Use BufferedInputStream and BufferedOutputStream for copying
+
+Create a class, TestImageCopy with a main method and do the following
+•	Accept image file path using Scanner
+•	If file does not exist in file system display message “File not Found”
+•	If the extension of file is not jpg, display message “File format not supported”
+•	Invoke the method copyImage
+If image is copied successfully, print message “Image copied Successfully”, else print “Image copy Unsuccessful”

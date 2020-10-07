@@ -1,0 +1,62 @@
+
+Exception
+
+1 – Using try-catch
+Create a class ExceptionTest with a main method. The main method should accept two numbers as commandline arguments. 
+
+In the main method, Divide the two numbers and display the result.
+
+The main method should display the following messages in case of invalid data passed through command line arguments.
+
+•	If no arguments are passed, the program should display “ No Input received”
+•	If the numbers provided are not integers, the program should display “Only integers are allowed”
+•	If the division results in ArithmeticException, display “Division with zero is not possible”
+
+
+
+2 – Using User-defined Exception
+Create a class Customer having following members:
+
+private String custNo
+private String custName
+private String category
+
+Parameterized constructor to initialize all instance variables
+Getter methods for all instance variables
+
+Perform following validations in the constructor
+
+•	custNo must start with ‘C’ or ‘c’
+•	custName must be atleast of 4 characters
+•	category must be either ‘Platinum’, ‘Gold’ or ‘Silver ‘
+
+When any of these validations fail, then raise a user defined exception InvalidInputException 
+
+Create a class TestCustomer having main method.  Ask user to enter customer details.  Create an object of Customer and perform validations.  Print details of customer.
+
+3 – Age Calculator 1
+Create a class AgeCalculator1 with a method calculateAge.
+
+The method calculateAge should take date of birth as a String in dd/mm/yyyy format. The method should return the age in years. (Hint: use getTime method of Date class for current date and date of birth for age calculation)
+
+If the date of birth provided is not in correct format, calculateAge method should propagate the exception to calling method
+
+Create a class TestAgeCalculator1 with a main method.
+•	Accept date of birth from the user using Scanner
+•	Invoke the method calculateAge and pass the accepted dob
+•	Display the age
+•	If the date of birth is not in correct format, display a message “Date of Birth should be in dd/mm/yyyy format”
+
+Assuming current date is 15/Feb/2017
+Sample Input 1
+Enter DOB 
+01/01/2000
+Sample Output 1
+17
+
+Sample Input 2
+Enter DOB 
+01-12-2001
+Sample Output 2
+Date of Birth should be in dd/mm/yyyy format
+
