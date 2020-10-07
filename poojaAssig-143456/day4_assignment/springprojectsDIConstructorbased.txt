@@ -1,0 +1,43 @@
+package com.demo.springprojectsDIConstructorBased;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class HelloWorld
+{
+public static void main(String[] args) {
+	//ApplicationContext context = new FileSystemXmlApplicationContext("ApplicationContext.xml")
+	ApplicationContext beanFactory =new ClassPathXmlApplicationContext("ApplicationContext.xml");
+	HelloWorldBean mybean=(HelloWorldBean) beanFactory.getBean("helloworldConstructorbased");
+	mybean.display();
+	
+}
+}
+-------------------------------------------------------------------------------------------------------
+package com.demo.springprojectsDIConstructorBased;
+
+public class HelloWorldBean {
+	private String name;
+	private int id;
+	HelloWorldBean(){
+		
+	}
+	HelloWorldBean(int id){
+		this.id=id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+void display() {
+		
+		System.out.println("your id is: "+id);
+		
+	}
+	
+}

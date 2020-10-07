@@ -1,0 +1,36 @@
+package com.demo.springprojectsDIsetterbased;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class HelloWorld
+{
+public static void main(String[] args) {
+	//ApplicationContext context = new FileSystemXmlApplicationContext("ApplicationContext.xml")
+	ApplicationContext beanFactory =new ClassPathXmlApplicationContext("ApplicationContext.xml");
+	HelloWorldBean mybean=(HelloWorldBean) beanFactory.getBean("helloworldsetterbased");
+	mybean.display();
+	
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+package com.demo.springprojectsDIsetterbased;
+
+public class HelloWorldBean {
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+public void display() {
+		
+		System.out.println("your name is: "+name);
+		
+	}
+	
+}

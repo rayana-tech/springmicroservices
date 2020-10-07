@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <!--    <bean id="helloworld" class="com.demo.springprojects.HelloWorldBean">
+    <property name="name" value="hello world"></property>
+</bean>
+
+<bean id="helloworldConstructorbased" class="com.demo.springprojectsDI.HelloWorldBean">
+<constructor-arg value="10" type="int"/>
+</bean>
+
+ <bean id="helloworldsetterbased" class="com.demo.springprojectsDIsetterbased.HelloWorldBean">
+    <property name="name">
+    <value>Pooja</value>
+    </property>
+</bean> 
+
+
+<bean id="helloworldAnno" class="com.demo.SpringAnnotationBasedIOC.HelloWorld">
+</bean> -->
+
+<bean id="assigConstructorbased" class="com.assignment.springproject.Employee">
+<constructor-arg value="emp1" type="String"/>
+<constructor-arg value="650000.00" type="double"></constructor-arg> 
+<constructor-arg value="25-2-1997" type="String"/>
+<constructor-arg value="address1"></constructor-arg> 
+<constructor-arg value="address2" type="String"/>
+<constructor-arg value="city-Bhilai"></constructor-arg>  
+<constructor-arg value="state-CG"></constructor-arg> 
+<constructor-arg value="country-India"></constructor-arg> 
+</bean>
+<bean id="assigsetterbased" class="com.assignment.springproject.Employee">
+<property name="name">
+    <value>emp2</value>
+    </property>
+    <property name="salary">
+    <value>750000</value>
+    </property>
+    <property name="dob">
+    <value>02-25-97</value>
+    </property>
+    <property name="address1">
+    <value>address1</value>
+    </property>
+    <property name="address2">
+    <value>address2</value>
+    </property>
+    <property name="city">
+    <value>TRV</value>
+    </property>
+    <property name="state">
+    <value>Kerala</value>
+    </property>
+       <property name="country">
+    <value>India</value>
+    </property>
+</bean>
+<bean id="assigAnno" class="com.assignment.springproject.Salary">
+<!-- <property name="id">
+    <value>101</value>
+    </property>
+       <property name="monthsalary">
+    <value>55000.00</value>
+    </property> -->
+</bean>
+</beans>

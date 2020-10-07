@@ -1,0 +1,499 @@
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class CheckArmstrongNum {
+	static int temp;
+	public static void checkIfArmstrongNum(int n) {
+		int a=0;
+		int c=0;
+		 temp=n;  
+		    while(n>0)  
+		    {  
+		    a=n%10;  
+		    n=n/10;  
+		    c=c+(a*a*a);  
+		    }  
+		    if(temp==c)  
+		    System.out.println("armstrong number");   
+		    else  
+		        System.out.println("Not armstrong number");  
+		
+	}
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		 System.out.print("Enter the 3 digit number:");
+		 int num= sc.nextInt();
+		 checkIfArmstrongNum(num);
+		
+}
+}
+----------------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class checkPrime_A2Q9 {
+	public static void primeCheck(int n) {
+		
+		int i,m=0,flag=0;      
+		  m=n/2;      
+		  if(n==0||n==1){  
+		   System.out.println(n+" is not prime number");      
+		  }else{  
+		   for(i=2;i<=m;i++){      
+		    if(n%i==0){      
+		     System.out.println(n+" is not prime number");      
+		     flag=1;      
+		     break;      
+		    }      
+		   }      
+		   if(flag==0)  { System.out.println(n+" is prime number"); }  
+		  }//end of else  	
+		
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int num=sc.nextInt();
+		primeCheck(num);
+	
+		
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class CountCharacters {
+	static final int MAX_CHAR = 256; 
+	public static void countChar(String str) {
+		int count[] = new int[MAX_CHAR]; 
+		  
+        int len = str.length(); 
+  
+        // Initialize count array index 
+        for (int i = 0; i < len; i++) 
+            count[str.charAt(i)]++; 
+  
+        // Create an array of given String size 
+        char ch[] = new char[str.length()]; 
+        for (int i = 0; i < len; i++) { 
+            ch[i] = str.charAt(i); 
+            int matchCount = 0; 
+            for (int j = 0; j <= i; j++) { 
+                if (str.charAt(i) == ch[j])  
+                	matchCount++;                 
+            } 
+  
+            if (matchCount == 1)  
+                System.out.println(str.charAt(i) + " is:" + count[str.charAt(i)]);  
+        }
+        } 
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		 System.out.print("Enter the String:");
+		 String str= sc.nextLine();
+		 System.out.println(str);
+		 String noSpaceStr = str.replaceAll("\\s", "");
+		 System.out.println(noSpaceStr);
+		 countChar(noSpaceStr);
+		
+}
+}
+-------------------------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+public class EvenNaturalNum_A2Q6 {
+	public static void main(String[] args) {
+		for(int i=1;i<=20;i++) {
+			if(i%2==0)
+			System.out.print(i+ " ");
+		}
+	}
+
+}
+----------------------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class Factorial_A2Q2 {
+	public static void findFact(int num) {
+		int n=1;
+	for(int i=1;i<=num;i++) {
+		n=n*i;
+				} 
+	System.out.println("Factorial of a number is: "+n);
+	
+	int i,m=0,flag=0;      
+	  m=n/2;      
+	  if(n==0||n==1){  
+	   System.out.println(n+" is not prime number");      
+	  }else{  
+	   for(i=2;i<=m;i++){      
+	    if(n%i==0){      
+	     System.out.println(n+" is not prime number");      
+	     flag=1;      
+	     break;      
+	    }      
+	   }      
+	   if(flag==0)  { System.out.println(n+" is prime number"); }  
+	  }//end of else  
+	  }
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		 System.out.print("Enter the number:");
+		 int num= sc.nextInt();
+		 findFact(num);
+		 
+}
+}
+---------------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+public class first10NaturalNum_A2Q4 {
+	public static void main(String[] args) {
+		for(int i=1;i<=10;i++) {
+			System.out.print(i+ " ");
+		}
+	}
+
+}
+------------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class FirstNPrimeNumbers {
+	public static void findNPrimeNumbers(int num) {
+		int ct=0,n=0,i=1,j=1;  
+		while(n<num)  
+		{  
+		j=1;  
+		ct=0;  
+		while(j<=i)  
+		{  
+		if(i%j==0)  
+		ct++;  
+		j++;   
+		}  
+		if(ct==2)  
+		{  
+		System.out.printf("%d ",i);  
+		n++;  
+		}  
+		i++;  
+		}  
+		
+	}
+		public static void main(String[] args) {
+			Scanner sc= new Scanner(System.in);
+			 System.out.print("Enter the value of N:");
+			 int num= sc.nextInt();
+			 findNPrimeNumbers(num);
+			
+			
+			
+	}
+}
+-----------------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class FirstNSeries {
+public static void findNseries(int n) {
+	int d, i;
+	for(i=1;i<=n;i++)
+	{
+
+	d=i*i*i;
+	System.out.print(d+",");
+	
+	}
+	
+}
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		 System.out.print("Enter the value of N:");
+		 int num= sc.nextInt();
+		 findNseries(num);
+		
+		
+		
+}}
+--------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+//1. Write a program to remove duplicate elements from the array of integers.
+public class IntegerArray {
+	static int length;
+	public static int removeDupication(int arr[], int length) {
+		if (length==0 || length==1) {
+			return length;
+		}
+		int[] temp = new int[length];  
+        int finalLength = 0;  
+        for (int i=0; i<length-1; i++){  
+            if (arr[i] != arr[i+1]){  
+                temp[finalLength++] = arr[i];  
+            }  
+         }  
+        temp[finalLength++] = arr[length-1];     
+         
+        for (int i=0; i<finalLength; i++){  
+            arr[i] = temp[i];  
+        }  
+        return finalLength;  
+		
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		 System.out.print("Enter no. of elements you want in array:");
+		length = sc.nextInt();
+	        int a[] = new int[length];
+	        System.out.println("Enter all the elements in a sorted order:");
+	        for(int i = 0; i < length; i++)
+	        {
+	            a[i] = sc.nextInt();	    
+	        } 
+	        int length = a.length; 
+	        
+	        length = removeDupication(a, length);  
+	        //printing array elements after removing duplication 
+	        for (int i=0; i<length; i++)  
+	           System.out.print(a[i]+" ");  
+	    }  
+	}
+
+
+---------------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class LargestNumber {
+	static int length;
+	public static int findLargestNum(int arr[], int l) {
+		int temp;  
+		for (int i = 0; i < l; i++)   
+		        {  
+		            for (int j = i + 1; j < l; j++)   
+		            {  
+		                if (arr[i] > arr[j])   
+		                {  
+		                    temp = arr[i];  
+		                    arr[i] = arr[j];  
+		                    arr[j] = temp;  
+		                }  
+		            }  
+		        }  
+		       return arr[l-1];  		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		 System.out.print("Enter no. of elements you want in array:");
+		length = sc.nextInt();
+	        int a[] = new int[length];
+	        System.out.println("Enter all the elements:");
+	        for(int i = 0; i < length; i++)
+	        {
+	            a[i] = sc.nextInt();	    
+	        } 
+	        
+	       int largestNum= findLargestNum(a, length); 
+	       System.out.println(largestNum);
+	        
+	    }  
+}
+------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class MathTable_A2Q8 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int num=sc.nextInt();
+		int temp=1;
+		for(int i=1;i<=10;i++) {
+			temp=num*i;
+			System.out.println(num+" *"+ i+" ="+temp);
+		}
+	}
+
+}
+------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+public class NumberPattern1 {
+	
+		public static void main(String[] args) {
+			int i, j, rows=5;  
+			for (i = rows; i >= 1; i--)   
+			{  
+			for (j = 1; j <= i; j++)  
+			{  
+			System.out.print(j+" ");  
+			}    
+			System.out.println();   
+			}
+			
+	
+}
+}
+--------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class NumberWithRange_A2Q7 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the minimum range");
+	int minVal=sc.nextInt();
+	System.out.println("enter the maximum range");
+	int maxval=sc.nextInt();
+	for(int i=minVal;i<=maxval;i++) {
+	System.out.print(i+ " ");
+}
+
+}}
+-----------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+public class PrimeNum_A2Q10 {
+	public static void main (String[] args)
+	   {		
+	       int i =0;
+	       int num =0;
+	       //Empty String
+	       String  primeNumbers = "";
+
+	       for (i = 2; i <= 100; i++)         
+	       { 		  	  
+	          int counter=0; 	  
+	          for(num =i; num>=1; num--)
+		  {
+	             if(i%num==0)
+		     {
+	 		counter = counter + 1;
+		     }
+		  }
+		  if (counter ==2)
+		  {
+		     //Appended the Prime number to the String
+		     primeNumbers = primeNumbers + i + " ";
+		  }	
+	       }	
+	       System.out.println("Prime numbers from 2 to 100 are :");
+	       System.out.println(primeNumbers);
+	   }
+
+}
+-----------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+public class ReverseNaturalNum_A2q5 {
+	public static void main(String[] args) {
+		for(int i=10;i>=1;i--) {
+			System.out.print(i+ " ");
+		}
+	}
+}
+-----------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class ReverseOfANum_A2Q11 {
+	public static void main(String args[])
+	   {
+	      int num=0;
+	      int reversenum =0;
+	      System.out.println("Input your number and press enter: ");
+	      Scanner in = new Scanner(System.in);
+	      num = in.nextInt();
+	      while( num != 0 )
+	      {
+	          reversenum = reversenum * 10;
+	          reversenum = reversenum + num%10;
+	          num = num/10;
+	      }
+
+	      System.out.println("Reverse of input number is: "+reversenum);
+	   }
+
+}
+----------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SortingOfAnArray {
+	static int length;
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);		 
+	        int a[] = new int[10];
+	        System.out.println("Enter all the elements:");
+	        for(int i = 0; i < 10; i++)
+	        {
+	            a[i] = sc.nextInt();	    
+	        } 
+	        Arrays.sort(a); 
+	        for(int i = 0; i < 10; i++)
+	        {
+	        	 System.out.print(a[i]+" ");	    
+	        } 
+	    }  
+}
+-------------------------------------------------------------------------------------------------
+package Day1Assignment;
+
+import java.util.Scanner;
+
+public class SumOfDigits_A2Q1 {
+	public static void sumOfDigits(int n) {
+		int a=0;
+		int sum=0;
+		
+		    while(n>0)  
+		    {  
+		    a=n%10;  
+		    n=n/10;  
+		    sum=sum+a;  
+		    }  	
+		   
+		        System.out.println(sum); 
+		        if((sum/10)!=0) {
+		    	while(sum/10 >0) {
+		    		a=sum%10;  
+				    sum=sum/10;  
+				    sum=sum+a; 
+		    	}
+		    	System.out.println(sum); 
+		    }
+		    	
+		
+	}
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		 System.out.print("Enter the number:");
+		 int num= sc.nextInt();
+		 sumOfDigits(num);
+		
+}
+
+}
