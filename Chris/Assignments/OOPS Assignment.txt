@@ -1,0 +1,105 @@
+OOPS Assignment
+
+
+
+1 – Aggregation and Encapsulation
+Create a class named Address with following private member variables
+•	addressLine of type String
+•	city of type String
+
+•	Create a parameterized constructor. Include Getters and setters.
+•	Include method getAddressDetails() which returns a String with address details in below format
+Ist Main HSR Layout, Bangalore
+
+Create a class Customer with following private member variables
+•	customerName of type String
+•	residentialAddress of type Address (HAS –A relation)
+
+Include a default constructor
+Create parameterized constructor which takes 2 parameters and initialize member variables
+Include Getters and Setters.
+Create method getCustomerDetails which returns a String with Customer details in below format
+Customer : John
+Residential Address : Ist Main HSR Layout, Bangalore
+
+Create a class TestCustomer with a main method
+•	Create an object of Customer with default constructor. Use setters to assign values to the member variables. Display the values of member variables using getters.
+•	Create an object of Customer using parameterized constructor and display all the details of the customer using getCustomerDetails method
+
+
+2 – Encapsulation & Inheritance
+a)	Create a class Book which has following members:
+	private int bookNo
+private String title
+private String author
+private float price
+	Provide getter and setter methods for all the instance variables.
+Create a class BookDetails which has the main method. Create an object of the Book class.  Initialize the object by reading inputs for the fields from the user. 
+
+b)	Extend the Book class to create a class EngineeringBook derived from Book with an additional attribute
+		private String category 	
+Provide setter and getter methods for type instance variable.
+Create an object of the EngineeringBook class  and test.
+
+3 – Inheritance and Abstraction
+Create abstract class PrepaidCard as per the below details
+•	Has attributes CardNo(int), availableBalance(double), swipeLimit(double)
+•	Abstract method swipeCard which takes amount as input and returns a boolean. 
+•	Override toString to get object details in a formatted way
+•	Concrete method rechargeCard which takes amount as input and adds it to availableBalance 
+
+Create TravelCard as per below details
+•	subclass of PrepaidCard
+•	Has attribute rewardPoints. 
+•	Travel Card implements the Rewardable interface for calculating reward points. 
+•	Interface Rewardable has a method which takes amount as input and returns reward points
+The swiped amount should not be more than the swipeLimit or the available balance for Travel Card.
+Travel Cards are used in USA(1$ = Rs 60). 
+When TravelCard is swiped, the swiped amount in dollars is converted in to INR and deducted from the available balance.  Processing charge of 5% of amount is charged for every swipe and is reduced from the balance.
+
+ 5 Reward points are given for every 100 INR swiped and added to the instance variable rewardPoints.
+Create a TestCard class. Create objects of TravelCard. Use the travel card by swiping and display the Card details.
+ 
+4 – Aggregation and Encapsulation
+Pre-requisite:  Completed Assignment 1 
+Copy the classes of Assignment1 in another package and change as per below requirement
+
+In Customer class, add the below member variable
+•	officialAddress of type Address
+Include getters and setters for above variable
+
+Create a parameterized constructor which accepts 3 parameters (customerName, residentialAddress, officialAddress) and initialize member variables.
+
+Change method getCustomerDetails to return a string in below format
+Customer : John
+Residential Address : Ist Main HSR Layout, Bangalore
+Official Address : Ist Main Electronics city, Bangalore
+
+In TestCustomer Class, create an object of Customer using parameterized constructor(3 parameters) and display details of Customer using getCustomerDetails
+
+
+5 – Inheritance and Abstraction
+Create an abstract class Medicine to represent a drug manufactured by a pharmaceutical company with attributes price and expiry date and a method getDetails() to print them.
+Also include an abstract function displayLabel() in the Medicine class. 
+
+Derive Tablet, Syrup and Ointment classes from the Medicine class. Override the displayLabel() function in each of these classes to print additional information suitable to the type of medicine. For example, in case of tablets, it could be “store in a cool dry place”, in case of ointments it could be “for external use only” etc.
+
+Create a class TestMedicine with the main method that declares an array of Medicine references of size 5. Create a medicine object of the type Tablet/Syrup/Ointment as decided by a randomly generated integer in the range 1 to 3. (Refer Java API Documentation to find out random number generation)
+Check the polymorphic behavior of the displayLabel() method.
+
+
+
+6 – Interface
+
+Create a package com.shape containing the following classes and interfaces.
+An interface Polygon containing the members as given below:
+void calcArea( );	Method to calculate area 
+void calcPeri( ); 	Method to calculate perimeter 
+Create a class Square that implements Polygon and has the following member:
+		side 	float
+Create another class Rectangle that implements Polygon and has the following member:
+		length		float
+		breadth	float
+In another package com.test, create a class that imports the above package and instantiates an object of the Square class and an object of the Rectangle class. 
+Call the methods on each of the classes to calculate the area and perimeter given the side and the length/breadth of the Square class and the Rectangle class respectively.
+
