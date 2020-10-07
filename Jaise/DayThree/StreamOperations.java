@@ -1,0 +1,71 @@
+package DayThree;
+
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.OptionalDouble;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+public class StreamOperations {
+	
+	static void getPlayersByCountry(List<Player> players,String country) {
+		List<Player> playernames= players.stream().filter(player->(player.getRuns()>100 && player.getCoutry().getCountryName().equals(country))).collect(Collectors.toList());
+		playernames.forEach(player->System.out.println(player.getPlayerName()));
+	}
+	static void getPlayersNamesDesc(List<Player> players) {
+		List<Player> playernames= players.stream().filter(c -> c.getRuns() > 5000).sorted(Comparator.comparing(Player::getPlayerName).reversed()).collect(Collectors.toList());
+		playernames.forEach(player->System.out.println(player.getPlayerName()));
+	}
+	private static OptionalDouble getAverageRunsByCountry(List<Player> players) {
+		
+		return players.stream().mapToInt(Player::getRuns).average();
+				}
+	private static Player getMaxRunsPlayer(List<Player> players) {
+		return players.stream().max(Comparator.comparingInt(Player::getRuns)).get();
+		
+	}
+	private static boolean checkHighScoreOrnot(List<Player> players) {
+		 Predicate<Player> p2 = p -> p.getRuns() > 10000;
+		return players.stream().anyMatch(p2);
+		
+	}
+	public static void main(String[] args) {
+		List<Player> players = new ArrayList<Player>();
+		Player pl = new Player("Dhoni", 10000, 20500, 205, new Country("Ind1001", "India"));
+		Player p2 = new Player("Sharma", 8000, 3500, 77, new Country("Ind1001", "India"));
+		Player p3 = new Player("Maxwell", 6000, 17000, 175, new Country("Aus1002", "Australia"));
+		Player p4 = new Player("Warner", 2045, 21045, 98, new Country("Aus1002", "Australia"));
+		players.add(pl);
+		players.add(p2);
+		players.add(p3);
+		players.add(p4);
+		
+		
+		System.out.println("List of players : ");
+		players.forEach(player->System.out.println(player.getPlayerName()));
+		System.out.println("Players with high score more than 100 : ");
+		getPlayersByCountry(players,"India");
+		System.out.println("Players with total score more than 5000 : ");
+		getPlayersNamesDesc(players);
+		OptionalDouble opDouble=getAverageRunsByCountry(players);
+		  System.out.println("Average runs by players : "+ opDouble.getAsDouble()); 
+		 
+		 List<String> players3 = players.stream().map(p -> p.getPlayerName()).sorted().collect(Collectors.toList());
+		 List<Integer> players4 = players.stream().map(p -> p.getHighScore()).sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		 System.out.println("Player names (Sorted order) : ");
+		 players3.forEach(System.out::println);
+		 System.out.println("Player scores(Reverse order) : ");
+		 players4.forEach(System.out::println);
+		 
+		 Player player5 = getMaxRunsPlayer(players);
+		 String str = player5.getPlayerName();
+		 System.out.println("Player who has maximum score : "+ str); 
+		 
+		 boolean player6 = checkHighScoreOrnot(players);
+		 System.out.println("Player scored more than 10000 runs :  "+ player6); 
+		
+			}
+}
