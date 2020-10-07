@@ -1,0 +1,533 @@
+1. Write a program to take a integer as input
+   Print the sum of digits of the number?
+   ex 9999 - 36 - 9
+2. Write a program to display the factorial of numbers from 1 to the input number?
+   Take input using scanner? Also display if the factorial is a prime number or not?
+3. Write a program to display number of days in a month? Month Name(String) and
+   year should be taken as input? Leap year should be considered?
+4. Write a program to print first 10 natural numbers
+
+package com.asignment_2;
+
+public class Natural {
+
+	public static void main(String[] args) {
+		 for(int i = 1; i <= 10; i++)
+	        {
+	            System.out.println(i);
+	        }
+	    }
+	}
+
+
+5. Write a program to print first 10 natural numbers in reverse order
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class ReverseNatural {
+	private static Scanner sc;
+	public static void main(String[] args) 
+	{
+		int number, i;
+		sc = new Scanner(System.in);
+		
+		System.out.print(" Please Enter the Maximum integer Value : ");
+		number = sc.nextInt();	
+		
+		for(i = number; i >= 1; i--)
+		{
+			System.out.print(i +"\t"); 
+		}	
+	}
+}
+
+6. Write a program to print first 10 even natural numbers
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class NaturalNumber {
+
+	public static void main(String[] args) {
+		{
+
+			int n=0,i=0;
+
+			Scanner X = new Scanner(System.in);
+
+			System.out.print("Enter value n : ");
+
+			n = X.nextInt();
+
+			for(i=1; i<n; i++)
+
+			{
+
+			if(i%2==0)
+
+			System.out.print(i+" ");
+
+			}
+
+			System.out.println();
+
+			}
+
+			}
+
+}
+
+7. Write a program to print numbers between the range ( say 10 to 100 OR 100 to 200 etc.,)
+
+package com.asignment_2;
+
+public class PrintNumber {
+	public static int isHappyNumber(int num){  
+        int rem = 0, sum = 0;  
+          
+        while(num > 0){  
+            rem = num%10;  
+            sum = sum + (rem*rem);  
+            num = num/10;  
+        }  
+        return sum;  
+    }  
+      
+    public static void main(String[] args) {  
+          
+        System.out.println("Print numbers between 1 and 100: ");  
+        for(int i = 1; i <= 100; i++){  
+            int result = i;  
+              
+           
+            while(result != 1 && result != 4){  
+                result = isHappyNumber(result);  
+            }  
+              
+            if(result == 1)  
+                System.out.print(i + " ");  
+        }  
+    }  
+}  
+
+
+
+8. Write a program to print mathematical table of given number
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class MathematicalTable {
+
+	public static void main(String[] args) {
+		{
+		   
+		        int num, i, tab;
+		        Scanner scan = new Scanner(System.in);
+				
+		        System.out.print("Enter a Number : ");
+		        num = scan.nextInt();
+				
+		        System.out.print("Table of " + num + " is\n");
+		        for(i=1; i<=10; i++)
+		        {
+		            tab = num*i;
+		            System.out.print(num + " * " + i + " = " + tab + "\n");
+		        }
+		    }
+	}
+}
+
+9. Write a program to find whether the given number is prime or not.
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class PrimeOrNot {
+
+	public static void main(String[] args) {
+		  int num;
+		  Scanner s = new Scanner(System.in);
+			System.out.println("Enter an integer number: ");
+			num = s.nextInt();
+	        boolean flag = false;
+	        for(int i = 2; i <= num/2; ++i)
+	        {
+	           
+	            if(num % i == 0)
+	            {
+	                flag = true;
+	                break;
+	            }
+	        }
+
+	        if (!flag)
+	            System.out.println(num + " is a prime number.");
+	        else
+	            System.out.println(num + " is not a prime number.");
+	    }
+	}
+
+
+10. Write a program to print prime numbers between 2 to 100
+
+package com.asignment_2;
+
+public class PrimeBtwn {
+
+	public static void main(String[] args) {
+		int ct=0,n=0,i=1,j=1;  
+		while(n<25)  
+		{  
+		j=1;  
+		ct=0;  
+		while(j<=i)  
+		{  
+		if(i%j==0)  
+		ct++;  
+		j++;   
+		}  
+		if(ct==2)  
+		{  
+		System.out.printf("%d ",i);  
+		n++;  
+		}  
+		i++;  
+		}    
+		}  
+		}  
+
+11. Write a program to get reverse of given number
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class NaturalNumberReverse {
+
+	static void PrintReverseOrder(int N) 
+	{ 
+	      
+	   
+	    if (N <= 0) 
+	    { 
+	        return; 
+	    } 
+	    else
+	    { 
+	        System.out.print(N + " "); 
+	  
+	        // Recursive call of the function 
+	        PrintReverseOrder(N - 1); 
+	    } 
+	} 
+	  
+	// Driver code 
+	public static void main(String[] args) 
+	{ 
+	    int N ; 
+	    Scanner s = new Scanner(System.in);
+		System.out.println("Enter an integer number: ");
+		N = s.nextInt();
+	    PrintReverseOrder(N); 
+	} 
+	}
+
+
+12. Write a program to find whether the given number is  palindrome or not
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		int rem, rev = 0, temp;
+
+		int n;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter an integer number: ");
+		n = s.nextInt();
+		temp = n;
+
+		while (n != 0) {
+			rem = n % 10;
+			rev = rev * 10 + rem;
+			n = n / 10;
+		}
+
+		if (temp == rev)
+			System.out.println(temp + " is a palindrome.");
+		else
+			System.out.println(temp + " is not a palindrome.");
+	}
+}
+
+
+13. Write a program to find factorial of given number
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		int num = 10;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter an integer number: ");
+		num = s.nextInt();
+ 
+        long factorial = 1;
+        for(int i = 1; i <= num; ++i)
+        {
+            // factorial = factorial * i;
+            factorial *= i;
+        }
+        System.out.printf("Factorial of %d = %d", num, factorial);
+    }
+}
+
+14. Write a program to find ncr. Hint : ncr = ( n! / ( (n-r)! * r!)
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class Ncr {
+
+	  public static int fact(int num)
+	    {
+	        int fact=1, i;
+	        for(i=1; i<=num; i++)
+	        {
+	            fact = fact*i;
+	        }
+	        return fact;
+	    }
+	    public static void main(String args[])
+	    {
+	        int n, r;
+	        Scanner scan = new Scanner(System.in);
+			
+	        System.out.print("Enter Value of n : ");
+	        n = scan.nextInt();
+	        System.out.print("Enter Value of r : ");
+	        r = scan.nextInt();
+			
+	        System.out.print("NCR = " +(fact(n)/(fact(n-r)*fact(r))));
+	    }
+	}
+
+15. Write a program to find sum of individual digits of given number
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class SumDigits {
+
+	public static void main(String[] args) {
+		 int m, n, sum = 0;
+	        Scanner s = new Scanner(System.in);
+	        System.out.print("Enter the number:");
+	        m = s.nextInt();
+	        while(m > 0)
+	        {
+	            n = m % 10;
+	            sum = sum + n;
+	            m = m / 10;
+	        }
+	        System.out.println("Sum of Digits:"+sum);
+	    }
+	}
+16. Write a program to get reverse of given number
+17. Write a program to find whether the given number is palindrome or not.
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		int rem, rev = 0, temp;
+
+		int n;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter an integer number: ");
+		n = s.nextInt();
+		temp = n;
+
+		while (n != 0) {
+			rem = n % 10;
+			rev = rev * 10 + rem;
+			n = n / 10;
+		}
+
+		if (temp == rev)
+			System.out.println(temp + " is a palindrome.");
+		else
+			System.out.println(temp + " is not a palindrome.");
+	}
+}
+
+
+18. Write a program to convert given digit into the word format.
+  a. If i/p is 1 -> output : One
+  b. If i/p is 2 -> output : Two etc.,
+
+package com.asignment_2;
+
+import java.util.Scanner;
+
+public class DigitToWord {
+	static void printValue(char digit) 
+	{ 
+	  
+	    
+	    switch (digit) 
+	    { 
+	  
+	    // For digit 0 
+	    case '0': 
+	        System.out.print("Zero "); 
+	        break; 
+	  
+	    // For digit 1 
+	    case '1': 
+	        System.out.print("One "); 
+	        break; 
+	  
+	    // For digit 2 
+	    case '2': 
+	        System.out.print("Two "); 
+	        break; 
+	  
+	    // For digit 3 
+	    case '3': 
+	        System.out.print("Three "); 
+	        break; 
+	  
+	    // For digit 4 
+	    case '4': 
+	        System.out.print("Four "); 
+	        break; 
+	  
+	    // For digit 5 
+	    case '5': 
+	        System.out.print("Five "); 
+	        break; 
+	  
+	    // For digit 6 
+	    case '6': 
+	        System.out.print("Six "); 
+	        break; 
+	  
+	    // For digit 7 
+	    case '7': 
+	        System.out.print("Seven "); 
+	        break; 
+	  
+	    // For digit 8 
+	    case '8': 
+	        System.out.print("Eight "); 
+	        break; 
+	  
+	    // For digit 9 
+	    case '9': 
+	        System.out.print("Nine "); 
+	        break; 
+	    } 
+	} 
+	  
+	
+	// digit in the given number 
+	static void printWord(String N) 
+	{ 
+	    int i, length = N.length(); 
+	  
+	    
+	    for (i = 0; i < length; i++) 
+	    { 
+	  
+	        // Print the digit in words 
+	        printValue(N.charAt(i)); 
+	    } 
+	} 
+	  
+	 
+	public static void main(String[] args) 
+	{ 
+		String N = "";
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the digit: ");
+		N = s.nextLine();
+		 printWord(N);
+	
+		
+
+	} 
+	} 
+
+
+
+
+
+
+19. Write a program to convert given number into word format.
+   a. If i/p is 123 -> output : One Hundred Twenty Three
+   package com.asignment_2;
+import java.util.Scanner;
+public class NumberToWord {
+
+	public void ntw(int n, String ch)
+	{
+		String one[] = { " ", " One", " Two", " Three", " Four", " Five", " Six", " Seven", " Eight", " Nine", " Ten",
+				" Eleven", " Twelve", " Thirteen", " Fourteen", "Fifteen", " Sixteen", " Seventeen", " Eighteen",
+				" Nineteen" };
+ 
+		String ten[] = { " ", " ", " Twenty", " Thirty", " Forty", " Fifty", " Sixty", "Seventy", " Eighty", " Ninety" };
+ 
+		if (n > 19)
+		{
+			System.out.print(ten[n / 10] + " " + one[n % 10]);
+		}
+		else
+		{
+			System.out.print(one[n]);
+		}
+		if (n > 0)
+			System.out.print(ch);
+	}
+ 
+	public static void main(String[] args)
+	{
+		int n = 0;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter an integer number: ");
+		n = s.nextInt();
+ 
+		if (n <= 0)
+		{
+			System.out.println("Enter numbers greater than 0");
+		}
+		else
+		{
+			NumberToWord notoword = new NumberToWord();
+			notoword.ntw((n / 1000000000), " Hundred");
+			notoword.ntw((n / 10000000) % 100, " crore");
+			notoword.ntw(((n / 100000) % 100), " lakh");
+			notoword.ntw(((n / 1000) % 100), " thousand");
+			notoword.ntw(((n / 100) % 10), " hundred");
+			notoword.ntw((n % 100), " ");
+		}
+	}
+}
+   

@@ -1,0 +1,165 @@
+1. In the class Lambda, create following static variables
+			1. countries of type List<String>
+			2. countryCapitals of type Map<String, String>  
+			
+   In a static block, initialize countries and countryCapitals with soe values
+	
+	Define following static methods and provide the implementation as given below
+	 
+	- displayCountries
+		- Iterate through the List and display the list using forEach(Consumer) method
+		
+	- displayCountryCapitals
+		- Iterate through the Map and display the map using forEach(BiConsumer) method
+	
+	- sortCountriesByName
+		- Sort the List using Comparator(Lambda Exp). Sort in the reverse alphabetical order
+	
+	- sortCountriesBylength
+		- Sort the List using Comparator, in descending order of number of characters in the country name.
+	 	  If the number of characters are same for a country, it should be sorted alphabetically
+	 	  (Use Comparator's static/default methods)
+	 	  
+	- removeCountry(String name)
+	    - remove the countries whose name is greater than 6 characters
+	
+	
+Execute the methods and display the results in main method 
+
+package com.java_8;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.BiConsumer;
+
+
+
+public class Lambda {
+	
+	private static  List<String> countries;
+	private static Map<String,String> countryCapitals;
+	
+
+	
+
+	public static List<String> getCountries() {
+		return countries;
+	}
+
+
+
+
+	public static void setCountries(List<String> countries) {
+		Lambda.countries = countries;
+	}
+
+
+
+
+	public static Map<String, String> getCountryCapitals() {
+		return countryCapitals;
+	}
+
+
+
+
+	public static void setCountryCapitals(Map<String, String> countryCapitals) {
+		Lambda.countryCapitals = countryCapitals;
+	}
+
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<String> countriesname = new ArrayList<>();
+
+		countriesname.add("INDIA");
+		countriesname.add("SRILANKA");
+		countriesname.add("AMERICA");
+		countriesname.add("BAHRAIN");
+
+		countriesname.forEach((String countries) -> {
+            System.out.println(countries);
+            System.out.println( "" );
+        });
+		
+		 
+	     Comparator c = Collections.reverseOrder();
+	     Collections.sort(countriesname,c);
+	     System.out.println("Sorted list using Comparator : " + countriesname);
+	     System.out.println( "" );
+	     
+		
+		
+		
+		 Map<String, String> map 
+         = new HashMap<>(); 
+
+     map.put("India", "Newdelhi"); 
+     map.put("America", "Washington"); 
+     
+     
+
+     // creating a custom action 
+     BiConsumer<String, String> action 
+         = new MyBiConsumer(); 
+
+     // calling forEach method 
+     map.forEach(action); 
+     
+     
+     countriesname.sort((s1,s2)->s1.length()-s2.length());
+     System.out.println("sortNameByLength " +countriesname);
+     System.out.println( "" );
+     countriesname.sort(Comparator.reverseOrder());
+     
+     System.out.println("revese Country name by alphabetical order "+countriesname);
+     System.out.println( "" );
+		
+     
+     int size = countriesname.size();
+     System.out.println( "The size of the ArrayList is: " + size);
+     System.out.println("");
+		
+     for (int i = 0; i < countriesname.size(); i++)
+         {
+         if (countriesname.get(i).length() > 6)
+                 {
+            	 countriesname.remove(i); 
+                 }
+        
+         }
+     System.out.println("removed countries nmae greater than 6 character "+countriesname);
+        
+     
+ } 
+} 
+
+
+class MyBiConsumer implements BiConsumer<String, String> { 
+
+@Override
+public void accept(String t, String u) {
+	// TODO Auto-generated method stub
+	 { 
+	     System.out.print("Country = " + t); 
+	     System.out.print("\t Capital = " + u); 
+	     System.out.println(); 
+	 }
+} 
+		
+	}
+
+	
+	
+
+
+
+
+
